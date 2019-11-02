@@ -1,0 +1,25 @@
+\newcommand{\source}[1]
+{
+	\ifthenelse
+	{\boolean{writefilenames}}
+	{
+		\begin{center}
+		{\color[rgb]{0.6,0.6,0.6} \rule{\columnwidth}{0.2mm}}
+		$\downarrow\;\;$ \textbf{#1} $\;\;\downarrow$
+		\end{center}
+	}
+	{}
+}
+
+
+\input{./Scripts/newcommands__estimations}
+\input{./Scripts/newcommands__generic_operators}
+\input{./Scripts/newcommands__indexes}
+\input{./Scripts/newcommands__matricial_operators}
+\input{./Scripts/newcommands__probability_distributions}
+\input{./Scripts/newcommands__set_theoretic_operators}
+\input{./Scripts/newcommands__signals}
+\input{./Scripts/newcommands__statistical_operators}
+\input{./Scripts/newcommands__text}
+\input{./Scripts/newcommands__networks}
+

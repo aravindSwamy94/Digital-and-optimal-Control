@@ -1,0 +1,71 @@
+% requires:
+% \usepackage{geometry}
+% \usepackage{eso-pic}
+
+% no fancy-headers etc.
+\thispagestyle{empty}
+
+% add the background
+\AddToShipoutPicture*
+{
+	\put(-3,0)
+	{
+		\parbox[b][\paperheight]
+		{\paperwidth}
+		{
+			\vfill
+			\centering
+			\includegraphics{cover.pdf}
+			\vfill
+		}
+	}
+}
+
+% modify the margins of the page
+\newgeometry
+{
+	left			= 2.0cm,
+	right			= 2.0cm,
+	bottom			= 0.0cm,
+	top				= 6.0cm,
+	bindingoffset	= 0.0cm
+}
+
+\begin{center}
+	%
+	\textbf
+	{
+		\LARGE
+		Distributed Parametric-Nonparametric Estimation \\
+		in Networked Control Systems \\
+	}
+	%
+\end{center}
+%
+\vspace{8cm}
+%
+{
+	\large
+	\begin{flushright}
+		%
+		{\bf Ph.D.\ candidate} \\
+		Damiano Varagnolo \\
+		%
+		\vspace{1cm}
+		%
+		{\bf Advisor} \\
+		Prof.\ Luca Schenato \\
+		%
+		\vspace{7.5cm}
+		%
+		Ph.D.\ School in \\
+		Information Engineering \\
+		2011
+		%
+	\end{flushright}
+}
+
+% restore the margins defined in the main settings
+\newpage
+\thispagestyle{empty}
+\restoregeometry

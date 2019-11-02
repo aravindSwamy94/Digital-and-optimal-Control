@@ -1,0 +1,26 @@
+\pagestyle{fancy}
+%
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+% delete current setting for header and footer
+\fancyhf{}
+%
+\fancyhead[LO]	{\bfseries \nouppercase \leftmark}% \TITLE}
+\fancyhead[CO]	{}
+\fancyhead[RO]	{\bfseries \thepage}% \ on \pageref{LastPage} - \today}
+\fancyhead[LE]	{\bfseries \thepage}% \ on \pageref{LastPage} - \today}
+\fancyhead[CE]	{}
+\fancyhead[RE]	{\bfseries \nouppercase \rightmark}% \TITLE}
+\fancyfoot[O]	{}
+\fancyfoot[E]	{}
+%
+\renewcommand	{\headrulewidth}	{0.5pt}	% top rule width
+\renewcommand	{\footrulewidth}	{0.0pt}	% bottom rule width
+\addtolength	{\headheight}		{2.5pt}	% make space for the rule
+%
+\fancypagestyle{plain}
+{
+	\fancyhead{}						% get rid of headers on plain pages
+	\renewcommand{\headrulewidth}{0pt}	% and the line
+}

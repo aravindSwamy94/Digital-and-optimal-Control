@@ -1,0 +1,14 @@
+% in order to call \includegraphics{myImage} instead of \includegraphics{../images/myImage}
+\graphicspath{{../Images/}}
+
+\pgfdeclarelayer{ultrabackground}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{ultrabackground,background,main,foreground}
+
+
+% \begin{pgfonlayer}{foreground}
+% 	%
+% 	%
+% \end{pgfonlayer}
+

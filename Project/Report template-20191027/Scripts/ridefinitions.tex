@@ -1,0 +1,31 @@
+% --> numbered environments style ridefinition example:
+%
+%\newtheoremstyle{mystyle}	% name of the style
+%{3pt}						% vertical space before the environment
+%{8pt}						% vertical space after the environment
+%{}							% body's font
+%{}							% indentation (empty -> \parindent)
+%{\bfseries}				% header's font
+%{.}						% punctuation after the header
+%{\newline}					% space after the header (empty -> \newline)
+%{\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}	% header formatting
+%											% (cancel for the default)
+%
+%
+% --> numbered environments ridefinition example
+%
+% \newtheorem	{unique_name}			% environment's ID
+%										% (use \begin{unique_name})
+%				[associated_counter]	% [optional] could be not
+%										% unambiguous
+%				{text}					% what will be printed
+%				[section]				% [optional] to which kind of
+%										% sectioning the enumeration
+%										% will be tied
+
+
+
+\theoremstyle		{nonumberplain}
+\def\theoremframecommand{\colorbox[rgb]{0.95,0.95,0.95}}
+\newshadedtheorem	{instructions}		{Instructions:}
+

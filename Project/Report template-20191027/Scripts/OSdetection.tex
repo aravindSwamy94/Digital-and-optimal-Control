@@ -1,0 +1,21 @@
+% detects on which operating system the compilation is happening
+
+\newif\ifRunningOnWindows
+%\newif\ifRunningOnLinux
+%\newif\ifRunningOnMacOS
+
+% use a package to detect substrings in strings
+\usepackage{substr}
+
+% write the version of the compilator
+\immediate\write18{latex --version > version.tmp}
+
+% read it
+\newread\myread
+\openin\myread=version.tmp
+\read\myread to \command
+
+\IfSubStringInString{MiKTeX}{\command}{\RunningOnWindowstrue}{\RunningOnWindowsfalse}
+
+% close the file
+\immediate\closein\myread

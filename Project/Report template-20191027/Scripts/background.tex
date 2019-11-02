@@ -1,0 +1,47 @@
+% ------------ shading ------------
+%
+%\pgfdeclarehorizontalshading
+%	{horizontal}					% nome
+%	{2cm}							% altezza della figura
+%	{	rgb(0cm)=(1.0, 1.0, 1.0);	% colore iniziale
+%		rgb(1cm)=(1.0, 1.0, 0.8)}	% colore finale
+%%
+%\pgfdeclareradialshading
+%	{radial}						% nome
+%	{\pgfpoint{1.0cm}{0.7cm}}		% posizione del centro di illuminazione (0,0 è in mezzo alla sfera)
+%	{	rgb(0cm)=(0.9, 0.0, 0.0);	% colore iniziale
+%		rgb(2cm)=(0.5, 0.0, 0.0)}	% colore finale
+%
+%\AddToShipoutPicture
+%{
+%	% ------------------ DECOMMENTARE LA PARTE CHE SERVE ------------------
+%
+%	\begin{tikzpicture}[remember picture,overlay,shading=horizontal]
+%		%
+%		% ---- shading lineare
+%		% nota: aumentare o diminuire gli xshift ed yshift per posizionare il rettangolo
+%		% correttamente all'interno del foglio che si sta usando
+%		\node (aa)	[xshift=-\textwidth,yshift=-\textheight]	at	(current page.south west)	{};
+%		\node (bb)	[xshift=+\textwidth,yshift=+\textheight]	at	(current page.north east)	{};
+%		\shade[shading angle=-90]	(aa)	rectangle	(bb);
+%		%
+%		% ---- shading radiale
+%		% TODO
+%		%
+%		% ---- scritta sullo sfondo
+%		\node [rotate=-60,scale=10,text opacity=0.1] at (current page.center) {For peer review only};
+%		%
+%	\end{tikzpicture}
+%
+%	% ---- immagine
+%	\put(0,0)
+%	{
+%		\parbox[b][\paperheight]{\paperwidth}
+%		{
+%			\vfill
+%			\centering
+%			\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{logo_unipd}
+%			\vfill
+%		}
+%	}
+%}
