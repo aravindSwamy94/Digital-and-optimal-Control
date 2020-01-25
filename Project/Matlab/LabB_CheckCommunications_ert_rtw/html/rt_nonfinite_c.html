@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td><a id="l1" class='ln'>1</a></td><td><span class="pp">#include "__cf_LabB_CheckCommunications.h"</span></td></tr>
+<tr name="2" id="2">
+<td><a id="l2" class='ln'>2</a></td><td><span class="pp">#include "rt_nonfinite.h"</span></td></tr>
+<tr name="3" id="3">
+<td><a id="l3" class='ln'>3</a></td><td><span class="pp">#include "rtGetNaN.h"</span></td></tr>
+<tr name="4" id="4">
+<td><a id="l4" class='ln'>4</a></td><td><span class="pp">#include "rtGetInf.h"</span></td></tr>
+<tr name="5" id="5">
+<td><a id="l5" class='ln'>5</a></td><td><span class="pp">#define</span> <a id="5c9" class="tk">NumBitsPerChar</a>                 <a id="5c40" class="tk">_p1ZMcYujXmC1ks3HAHIPa0</a></td></tr>
+<tr name="6" id="6">
+<td><a id="l6" class='ln'>6</a></td><td><a id="6c1" class="tk">real_T</a> <a id="6c8" class="tk">rtInf</a> ; <a id="6c16" class="tk">real_T</a> <a id="6c23" class="tk">rtMinusInf</a> ; <a id="6c36" class="tk">real_T</a> <a id="6c43" class="tk">rtNaN</a> ; <a id="6c51" class="tk">real32_T</a> <a id="6c60" class="tk">rtInfF</a> ; <a id="6c69" class="tk">real32_T</a></td></tr>
+<tr name="7" id="7">
+<td><a id="l7" class='ln'>7</a></td><td><a id="7c1" class="tk">rtMinusInfF</a> ; <a id="7c15" class="tk">real32_T</a> <a id="7c24" class="tk">rtNaNF</a> ; <span class="kw">void</span> <a id="7c38" class="tk">rt_InitInfAndNaN</a> ( <a id="7c57" class="tk">size_t</a> <a id="7c64" class="tk">realSize</a> ) <span class="br">{</span> (</td></tr>
+<tr name="8" id="8">
+<td><a id="l8" class='ln'>8</a></td><td><span class="kw">void</span> ) ( <a id="8c10" class="tk">realSize</a> ) ; <a id="8c23" class="tk">rtNaN</a> = <a id="8c31" class="tk">rtGetNaN</a> ( ) ; <a id="8c46" class="tk">rtNaNF</a> = <a id="8c55" class="tk">rtGetNaNF</a> ( ) ; <a id="8c71" class="tk">rtInf</a> =</td></tr>
+<tr name="9" id="9">
+<td><a id="l9" class='ln'>9</a></td><td><a id="9c1" class="tk">rtGetInf</a> ( ) ; <a id="9c16" class="tk">rtInfF</a> = <a id="9c25" class="tk">rtGetInfF</a> ( ) ; <a id="9c41" class="tk">rtMinusInf</a> = <a id="9c54" class="tk">rtGetMinusInf</a> ( ) ;</td></tr>
+<tr name="10" id="10">
+<td><a id="l10" class='ln'>10</a></td><td><a id="10c1" class="tk">rtMinusInfF</a> = <a id="10c15" class="tk">rtGetMinusInfF</a> ( ) ; <span class="br">}</span> <a id="10c38" class="tk">boolean_T</a> <a id="10c48" class="tk">rtIsInf</a> ( <a id="10c58" class="tk">real_T</a> <a id="10c65" class="tk">value</a> ) <span class="br">{</span></td></tr>
+<tr name="11" id="11">
+<td><a id="l11" class='ln'>11</a></td><td><span class="kw">return</span> ( <a id="11c10" class="tk">boolean_T</a> ) ( ( <a id="11c26" class="tk">value</a> <a id="11c32" class="tk">==</a> <a id="11c35" class="tk">rtInf</a> <a id="11c41" class="tk">||</a> <a id="11c44" class="tk">value</a> <a id="11c50" class="tk">==</a> <a id="11c53" class="tk">rtMinusInf</a> ) <a id="11c66" class="tk">?</a></td></tr>
+<tr name="12" id="12">
+<td><a id="l12" class='ln'>12</a></td><td><a id="12c1" class="tk">_TlYaTpHyOy3h9kx50A0_s2</a> <a id="12c25" class="tk">:</a> <a id="12c27" class="tk">_TPQ_vWWUSL7ze3htINC_W2</a> ) ; <span class="br">}</span> <a id="12c57" class="tk">boolean_T</a> <a id="12c67" class="tk">rtIsInfF</a> (</td></tr>
+<tr name="13" id="13">
+<td><a id="l13" class='ln'>13</a></td><td><a id="13c1" class="tk">real32_T</a> <a id="13c10" class="tk">value</a> ) <span class="br">{</span> <span class="kw">return</span> ( <a id="13c29" class="tk">boolean_T</a> ) ( ( ( <a id="13c47" class="tk">value</a> ) <a id="13c55" class="tk">==</a> <a id="13c58" class="tk">rtInfF</a> <a id="13c65" class="tk">||</a> ( <a id="13c70" class="tk">value</a> )</td></tr>
+<tr name="14" id="14">
+<td><a id="l14" class='ln'>14</a></td><td><a id="14c1" class="tk">==</a> <a id="14c4" class="tk">rtMinusInfF</a> ) <a id="14c18" class="tk">?</a> <a id="14c20" class="tk">_TlYaTpHyOy3h9kx50A0_s2</a> <a id="14c44" class="tk">:</a> <a id="14c46" class="tk">_TPQ_vWWUSL7ze3htINC_W2</a> ) ; <span class="br">}</span></td></tr>
+<tr name="15" id="15">
+<td><a id="l15" class='ln'>15</a></td><td><a id="15c1" class="tk">boolean_T</a> <a id="15c11" class="tk">rtIsNaN</a> ( <a id="15c21" class="tk">real_T</a> <a id="15c28" class="tk">value</a> ) <span class="br">{</span> <a id="15c38" class="tk">boolean_T</a> <a id="15c48" class="tk">result</a> = ( <a id="15c59" class="tk">boolean_T</a> )</td></tr>
+<tr name="16" id="16">
+<td><a id="l16" class='ln'>16</a></td><td><a id="16c1" class="tk">_PIqWtbzrbQqv_KS_31HnE2</a> ; <a id="16c27" class="tk">size_t</a> <a id="16c34" class="tk">bitsPerReal</a> = <span class="kw">sizeof</span> ( <a id="16c57" class="tk">real_T</a> ) <a id="16c66" class="tk">*</a> (</td></tr>
+<tr name="17" id="17">
+<td><a id="l17" class='ln'>17</a></td><td><a id="17c1" class="tk">NumBitsPerChar</a> ) ; <span class="kw">if</span> ( <a id="17c25" class="tk">bitsPerReal</a> <a id="17c37" class="tk">==</a> <a id="17c40" class="tk">__khn2qNy4zfE3Rcj6lRsn0</a> ) <span class="br">{</span> <a id="17c68" class="tk">result</a> =</td></tr>
+<tr name="18" id="18">
+<td><a id="l18" class='ln'>18</a></td><td><a id="18c1" class="tk">rtIsNaNF</a> ( ( <a id="18c14" class="tk">real32_T</a> ) <a id="18c25" class="tk">value</a> ) ; <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span> <span class="kw">union</span> <span class="br">{</span> <a id="18c52" class="tk">LittleEndianIEEEDouble</a></td></tr>
+<tr name="19" id="19">
+<td><a id="l19" class='ln'>19</a></td><td><a id="19c1" class="tk">bitVal</a> ; <a id="19c10" class="tk">real_T</a> <a id="19c17" class="tk">fltVal</a> ; <span class="br">}</span> <a id="19c28" class="tk">tmpVal</a> ; <a id="19c37" class="tk">tmpVal</a> . <a id="19c46" class="tk">fltVal</a> = <a id="19c55" class="tk">value</a> ; <a id="19c63" class="tk">result</a> = (</td></tr>
+<tr name="20" id="20">
+<td><a id="l20" class='ln'>20</a></td><td><a id="20c1" class="tk">boolean_T</a> ) ( ( <a id="20c17" class="tk">tmpVal</a> . <a id="20c26" class="tk">bitVal</a> . <a id="20c35" class="tk">words</a> . <a id="20c43" class="tk">wordH</a> <a id="20c49" class="tk">&amp;</a> <a id="20c51" class="tk">_C69we9z7iNW9YfIyLPLPC_</a> )</td></tr>
+<tr name="21" id="21">
+<td><a id="l21" class='ln'>21</a></td><td><a id="21c1" class="tk">==</a> <a id="21c4" class="tk">_C69we9z7iNW9YfIyLPLPC_</a> <a id="21c28" class="tk">&amp;&amp;</a> ( ( <a id="21c35" class="tk">tmpVal</a> . <a id="21c44" class="tk">bitVal</a> . <a id="21c53" class="tk">words</a> . <a id="21c61" class="tk">wordH</a> <a id="21c67" class="tk">&amp;</a></td></tr>
+<tr name="22" id="22">
+<td><a id="l22" class='ln'>22</a></td><td><a id="22c1" class="tk">_CWvptZDNi2y10nMHh800M_</a> ) <a id="22c27" class="tk">!=</a> <a id="22c30" class="tk">_PIqWtbzrbQqv_KS_31HnE2</a> <a id="22c54" class="tk">||</a> ( <a id="22c59" class="tk">tmpVal</a> . <a id="22c68" class="tk">bitVal</a> .</td></tr>
+<tr name="23" id="23">
+<td><a id="l23" class='ln'>23</a></td><td><a id="23c1" class="tk">words</a> . <a id="23c9" class="tk">wordL</a> <a id="23c15" class="tk">!=</a> <a id="23c18" class="tk">_PIqWtbzrbQqv_KS_31HnE2</a> ) ) ) ; <span class="br">}</span> <span class="kw">return</span> <a id="23c59" class="tk">result</a> ; <span class="br">}</span></td></tr>
+<tr name="24" id="24">
+<td><a id="l24" class='ln'>24</a></td><td><a id="24c1" class="tk">boolean_T</a> <a id="24c11" class="tk">rtIsNaNF</a> ( <a id="24c22" class="tk">real32_T</a> <a id="24c31" class="tk">value</a> ) <span class="br">{</span> <a id="24c41" class="tk">IEEESingle</a> <a id="24c52" class="tk">tmp</a> ; <a id="24c58" class="tk">tmp</a> . <a id="24c64" class="tk">wordL</a> .</td></tr>
+<tr name="25" id="25">
+<td><a id="l25" class='ln'>25</a></td><td><a id="25c1" class="tk">wordLreal</a> = <a id="25c13" class="tk">value</a> ; <span class="kw">return</span> ( <a id="25c30" class="tk">boolean_T</a> ) ( ( <a id="25c46" class="tk">tmp</a> . <a id="25c52" class="tk">wordL</a> . <a id="25c60" class="tk">wordLuint</a> <a id="25c70" class="tk">&amp;</a></td></tr>
+<tr name="26" id="26">
+<td><a id="l26" class='ln'>26</a></td><td><a id="26c1" class="tk">_Lx0QXbAfgItqmPZnmu_Pj0</a> ) <a id="26c27" class="tk">==</a> <a id="26c30" class="tk">_Lx0QXbAfgItqmPZnmu_Pj0</a> <a id="26c54" class="tk">&amp;&amp;</a> ( <a id="26c59" class="tk">tmp</a> . <a id="26c65" class="tk">wordL</a> .</td></tr>
+<tr name="27" id="27">
+<td><a id="l27" class='ln'>27</a></td><td><a id="27c1" class="tk">wordLuint</a> <a id="27c11" class="tk">&amp;</a> <a id="27c13" class="tk">_i__a2Y_VTA2QJVHiStPPV_</a> ) <a id="27c39" class="tk">!=</a> <a id="27c42" class="tk">_PIqWtbzrbQqv_KS_31HnE2</a> ) ; <span class="br">}</span></td></tr>
+<tr name="28" id="28">
+<td><a id="l28" class='ln'>28</a></td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>

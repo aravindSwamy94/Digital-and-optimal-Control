@@ -2,7 +2,7 @@ clc;
 
 sys = ss(A, B, C, D);
 H = tf(sys);
-pzplot(sys);
+% pzplot(sys);
 e = eig(A);
 
 %sys = ss(A,B,C,D)

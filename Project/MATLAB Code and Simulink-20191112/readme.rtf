@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw8400\paperh11900\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \
+\
+Embedded coder add-on:
+\f1\b0 \
+Just click continue on the prompt. Everything should work. If not, then use the files without serial comms. The prompt will still jump up but this time everything should work when pressing continue.\
+\
+\
+
+\f0\b Matlab 2019b launch problems:
+\f1\b0 \
+NOTE: When you are correctly building for the MinSeg, it will take at least 30 seconds. If the process is a lot faster than that, the code was not compiled for the MinSeg but for your laptop.\
+\
+For some reason, CTRL+T does not build for the target hardware but for the local laptop.\
+To build for the MinSeg with external connection (communication to laptop):\
+- Open a simulink model\
+- Select HARDWARE from the bar on top of the model window\
+- Click on the \'93Monitor & test\'94 (Green arrow with a simulink model six file icon) to run the code in \'91External\'92 mode\
+\
+Notes on ending the communication:\
+It is always a good idea to stop the simulation from your computer first (SIMULATION, stop) and then press the reset button on the MinSeg after you have executed some code in external mode.\
+\
+Nothing serious will happen if you do not do this, but at times the simulink may freeze for a while if you disconnect the robot first as it will try to establish a new connection to the robot before giving up.\
+\
+If you have problems uploading code to your robot, the same thing did happen to the robot - it will try to establish a connection to the laptop. Pressing the reset button will reset the robot and let it out of the freeze.\
+\
+\
+
+\f0\b Windows: Cannot find COM port of the MinSeg
+\f1\b0 \
+\
+In case the COM port searching fails, you can try again or do the following steps if it really is not working.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Use the files without serial communications\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Open the Model Configuration Parameters in Simulink\
+Select the Hardware Implementation from the list on the left side\
+On the right side, under Hardware board settings, open Target hardware resources\
+Select Host-board connection and set it to Automatic\
+\
+OR\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+Open up the Windows start menu and type into search: Device Manager\
+Open the Device Manager and see the devices under your COM ports\
+Note the COM port number of the Arduino Mega 2560\
+Set the Host-board connection type to manual and set in the correct port\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+
+\f0\b Files without serial communication automatic plotting:
+\f1\b0 \
+\
+If you are not using Windows, or you are experiencing crashes with Windows, you can use the modified files without the serial communication automatic plotting. These do not need the Simulink Real-Time library which is for Windows only. You can find readily made scopes inside the controller or controller/observer subsystems for plotting.\
+\
+You can also create and use \'91to workspace\'92 blocks to create a time series into workspace and use a regular matlab script for more fancier plotting if you prefer. To plot a time series, just call plot(TimeSeriesNameHere).\
+\
+
+\f0\b If you want to use the old files and they work for you:\
+
+\f1\b0 Remember to change the voltage reference of the motor drivers from 9v to 7.2V. This can be found under the plant subsystem.}

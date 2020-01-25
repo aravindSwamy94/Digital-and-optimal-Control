@@ -1,0 +1,16 @@
+clc;
+load scope_40.mat;
+load scope_60.mat;
+load scope_80.mat;
+load scope_100.mat;
+load scope_125.mat;
+load scope_150.mat;
+load scope_175.mat;
+load scope_200.mat;
+x = [40 60 80 100 125 150 175 200];
+x_w = [norm(squeeze(ScopeData_40.signals(2).values)) norm(squeeze(ScopeData_60.signals(2).values)) norm(squeeze(ScopeData_80.signals(2).values)) norm(squeeze(ScopeData_100.signals(2).values)) norm(squeeze(ScopeData_125.signals(2).values)) norm(squeeze(ScopeData_150.signals(2).values)) norm(squeeze(ScopeData_175.signals(2).values)) norm(squeeze(ScopeData_200.signals(2).values))];
+theta = [norm(squeeze(ScopeData_40.signals(3).values)) norm(squeeze(ScopeData_60.signals(3).values)) norm(squeeze(ScopeData_80.signals(3).values)) norm(squeeze(ScopeData_100.signals(3).values)) norm(squeeze(ScopeData_125.signals(3).values)) norm(squeeze(ScopeData_150.signals(3).values)) norm(squeeze(ScopeData_175.signals(3).values)) norm(squeeze(ScopeData_200.signals(3).values))];
+figure;
+plot(x, x_w);
+figure;
+plot(x, theta);
